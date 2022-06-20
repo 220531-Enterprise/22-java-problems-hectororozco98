@@ -1,27 +1,28 @@
 package com.revature.eval.java.core;
 
+import java.util.Arrays;
+
 public class Tester {
-
+	
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
+	
 		
-		System.out.println(toMilesPerHour(10));
-
+		for (int x = 0; x < 50; x++) {
+			System.out.println(guessingGame(3,100));
+			
+		}
 	}
 
-	public static long toMilesPerHour(double kilometersPerHour) {
+	public static int guessingGame(int x, int y) {
 		
-		// check if the params is less than 0, if so return -1
+		int range = y - x + 1;
 		
-		if (kilometersPerHour <0) {
-			return -1;
-		}
-		
-		// find out the formula to convert kph to mph
-		
-		long mph = Math.round(kilometersPerHour / 1.609);
-		
-		// return it!
-		return mph;
+		return ((int) (Math.random() * range)) + x;
 	}
 }
-
